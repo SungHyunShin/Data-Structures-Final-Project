@@ -35,7 +35,7 @@ def getlinks(url, filenum, linknum, layers):
 	
 	for link in soup.find_all('a'):
 		if (link.get('href','').startswith('/wiki/') and not link.get('href','').startswith('/wiki/Special:') and not link.get('href','').startswith('/wiki/Help:') and not link.get('href','').startswith('/wiki/Category:') and not 
-link.get('href','').startswith('/wiki/Wikipedia:About')):
+link.get('href','').startswith('/wiki/Wikipedia:')):
 			f.write(link.get('href'))
 			f.write('\n')
 	f.close()
