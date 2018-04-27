@@ -7,12 +7,13 @@ import requests
 import random
 import string
 
-def random_string(length):
-	return ''.join(random.choice(string.ascii_letters) for m in range(length))
-
 URL = "https://en.wikipedia.org/wiki/Main_Page"
 LAYERS = 1
 NUM_LINKS = 6
+
+def random_string(length):
+	return ''.join(random.choice(string.ascii_letters) for m in range(length))
+
 
 def usage(status = 0):
 	print(''' Usage:
@@ -45,6 +46,8 @@ link.get('href','').startswith('/wiki/Wikipedia:')):
 #	putURLcommand = "echo \"" + url + "\" > toplinks" + str(layers) + str(filenum) + ".txt"
 	putURLcommand = "echo \"" + url + "\" > " + randstr + ".txt"
 	os.system(putURLcommand)
+#	print(url+"		file: "+randstr+".txt")
+	print('{:60}{:10}'.format(url,"file: "+randstr+".txt"))
 #	commandsort = "cat links.txt | sort | uniq -c | sort -n | tail -" + str(linknum) + " | sort -nr >> toplinks" + str(layers) + str(filenum) + ".txt"
 	commandsort = "cat links.txt | sort | uniq -c | sort -n | tail -" + str(linknum) + " | sort -nr >> " + randstr + ".txt"
 
@@ -56,7 +59,6 @@ link.get('href','').startswith('/wiki/Wikipedia:')):
 
 	count = 0
 	for lines in open(linkstr,"r").read().splitlines()[1:]:
-		print(lines)
 		lines = lines.split()
 		count += 1
 		newurl = "https://en.wikipedia.org" + lines[1]
