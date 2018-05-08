@@ -1,3 +1,47 @@
+---- Data Structures Final Project ----
+--  Wikipedia Network Analysis Tool --
+
+========================================
+
+Team Memeber:
+
+Nick Marcopoli (nmarcopo) 
+Andy Shin (ashin1)
+Austin Sura (asura)
+Tina Wu (ywu6)
+
+===============================================================
+
+Contribution:
+
+Nick and Andy mainly worked on the visualization part of the project: 
+creating the graph and adding user-interaction features
+Tina and Austin mainly worked on the python code that gets the weblinks
+from each wikipedia page
+
+Everyone contributed equally to the completion of this project.
+
+================================================================
+
+Video Demonstration:
+
+https://www.youtube.com/watch?v=-WMY3JJ0s_I
+
+================================================================
+
+Execution of the programs:
+
+To run the backend: ./wikiCrawler.py or ./wikiCrawler.py -h
+To run the visualization: open the program in Jupyter Notebook
+
+================================================================
+
+Test Suite:
+
+We made a test script (timememory.py) to benchmark the runtime and 
+memory usage of varying #links and #layers. 
+A sample of output is shown below:
+
 Wikipedia Article URL: https://en.wikipedia.org/wiki/Fortnite
  
 |   #LINKS    |   #LAYERS   |  Time Usage  | Memory Usage |
@@ -23,3 +67,14 @@ Wikipedia Article URL: https://en.wikipedia.org/wiki/Fortnite
 | 4           | 4           | 112.903831   | 72.882812    |
 | 5           | 4           | 259.600525   | 107.906250   |
 |-------------|-------------|--------------|--------------|
+
+To run the test script: ./timememory.py
+
+As mentioned in our video, it is not possible to test the output every time 
+because wikipedia pages are constantly changing. Therefore, we manually tested 
+the outputs by clicking into the web pages and seeing what links are the most 
+relevant. 
+
+Since we used python and did not manually allocate memories, we did not have a 
+memory issue (we tested by running valgrind, but making a sperate script for that
+did not seem necessary).
