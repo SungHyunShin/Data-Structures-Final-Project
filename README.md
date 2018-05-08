@@ -33,6 +33,7 @@ Execution of the programs:
 
 To run the backend: ./wikiCrawler.py or ./wikiCrawler.py -h
 To run the visualization: open the program in Jupyter Notebook
+(jupyter notebook --ip XXXXX --port XXXX --no-browser)
 
 ================================================================
 
