@@ -1,5 +1,7 @@
 ---- Data Structures Final Project ----
+
 --  Wikipedia Network Analysis Tool --
+
 ========================================
 
 Done with Python and Jupyter Notebook, this project creates a graph given a Wikipedia link and the article’s connections to other articles. The graph node can be clicked which then displays its connections.
